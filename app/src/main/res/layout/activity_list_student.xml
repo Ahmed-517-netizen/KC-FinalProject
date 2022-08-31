@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".ListStudent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="Android MySQL Application"
+        android:textColor="@color/cardview_shadow_end_color"
+        android:textSize="20sp"
+        android:id="@+id/txtData"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnFetch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
+        android:background="@color/design_default_color_on_primary"
+        android:minWidth="250dp"
+        android:textSize="28dp"
+        android:text="تحديث البيانات"
+        android:textColor="#fff" />
+    <ListView
+        android:id="@+id/lstData"
+        android:divider="#000"
+        android:dividerHeight="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout >

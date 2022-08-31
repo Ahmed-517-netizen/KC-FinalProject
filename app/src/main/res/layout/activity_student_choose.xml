@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentChoose">
+    <Button
+        android:id="@+id/btnQuran"
+        android:textSize="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="القران الكريم"
+        android:layout_marginTop="105dp"
+        />
+    <Button
+        android:id="@+id/btneval"
+        android:textSize="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnQuran"
+        android:text="تقييمي"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>

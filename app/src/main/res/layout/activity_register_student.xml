@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterStudent">
+    <TextView
+        android:id="@+id/txttilte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الرجاء مل البيانات التالية"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:id="@+id/TxtStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="الاسم"
+        android:textSize="24dp"
+        android:layout_below="@+id/txttilte"
+        android:inputType="textPersonName"
+        >
+
+    </EditText>
+    <EditText
+        android:id="@+id/TxtAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="العمر"
+        android:textSize="24dp"
+        android:layout_below="@+id/TxtStudentName"
+        android:inputType="number"
+        >
+
+    </EditText>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/TxtAge"
+        android:minHeight="70dp"
+
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:id="@+id/spinnernatio"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/spinner"
+        android:minHeight="70dp"
+
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:textSize="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnernatio"
+        android:text="حفظ"
+        android:layout_marginTop="20dp"
+        >
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnsave"
+        android:layout_marginTop="20dp"
+        android:text="عرض"
+        android:textSize="34dp">
+
+    </Button>
+    <TextView
+        android:id="@+id/txterro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/btnback"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/txtdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/txterro"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>
