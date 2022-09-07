@@ -4,23 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7A76C"
     tools:context=".StudentChoose">
+
     <Button
         android:id="@+id/btnQuran"
-        android:textSize="34dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="250dp"
+        android:backgroundTint="#FFC090"
         android:text="القران الكريم"
-        android:layout_marginTop="105dp"
-        />
-    <Button
-        android:id="@+id/btneval"
-        android:textSize="34dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnQuran"
-        android:text="تقييمي"
-        android:layout_marginTop="20dp"
-        />
+        android:textSize="34dp" />
+
 </RelativeLayout>

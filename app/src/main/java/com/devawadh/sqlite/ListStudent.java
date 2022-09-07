@@ -3,12 +3,19 @@ package com.devawadh.sqlite;
 import androidx.appcompat.app.AppCompatActivity;
 import java.sql.Connection;
 import java.sql.DriverManager;
+
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
@@ -21,14 +28,38 @@ public class ListStudent extends AppCompatActivity {
     SimpleAdapter ADAhere;
     ListView lstData;
     TextView txtData;
+    private static final int ADD_Student_REQUEST = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_student);
         lstData=findViewById(R.id.lstData);
         txtData=findViewById(R.id.txtData);
+
+        FloatingActionButton fab = findViewById(R.id.btnAdd);
+        lstData.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(ListStudent.this, "hooo", Toast.LENGTH_LONG)
+                        .show();
+                /*TextView textView = (TextView) lstData.findViewById(R.id.lblstudenname);
+                String text = textView.getText().toString();
+                Toast.makeText(ListStudent.this, "hooo", Toast.LENGTH_SHORT)
+                        .show();*/
+            }
+        });
+        //adding on click listner for floating action button.
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //starting a new activity for adding a new course and passing a constant value in it.
+                Intent intent = new Intent(ListStudent.this, RegisterStudent.class);
+                startActivityForResult(intent, ADD_Student_REQUEST);
+            }
+        });
         ConnectMySql connectMySql = new ConnectMySql();
         connectMySql.execute("");
+
     }
     private class ConnectMySql extends AsyncTask<String, Void, String> {
         String res = "";
@@ -53,7 +84,7 @@ public class ListStudent extends AppCompatActivity {
 
                 String result = "Database Connection Successful\n";
                 Statement st = con.createStatement();
-                ResultSet rs = st.executeQuery("select distinct StudentName from students_ahmed");
+                ResultSet rs = st.executeQuery("select distinct studentid,StudentName,Age,Class,Nationlity from students_ahmed");
                 ResultSetMetaData rsmd = rs.getMetaData();
 
                 List<Map<String, String>> data = null;
@@ -61,17 +92,23 @@ public class ListStudent extends AppCompatActivity {
 
                 while (rs.next()) {
                     Map<String, String> datanum = new HashMap<String, String>();
-                    datanum.put("A", rs.getString(1).toString());
+                    datanum.put("id",rs.getString(1).toString());
+                    datanum.put("A", " -- "+rs.getString(2).toString());
+                    datanum.put("Age"," العمر"+ rs.getString(3).toString());
+//                    datanum.put("natio"," الجنسية"+ rs.getString(4).toString());
                     data.add(datanum);
                 }
 
-                String[] fromwhere = { "A" };
-                int[] viewswhere = { R.id.lblstudenname };
+//                String[] fromwhere = { "A","Age", "natio"};
+                String[] fromwhere = { "id","A","Age"};
+                //int[] viewswhere = { R.id.lblstudenname,R.id.lblstudenage,R.id.lblstudennation };
+                int[] viewswhere = {R.id.lblid ,R.id.lblstudenname,R.id.lblstudenage };
+
                 ADAhere = new SimpleAdapter(ListStudent.this, data,
                         R.layout.student, fromwhere, viewswhere);
 
                 while (rs.next()) {
-                    result += rs.getString(1).toString() + "\n";
+                    result += rs.getString(1).toString() +rs.getString(2).toString() + "\n";
                 }
                 res = result;
             } catch (Exception e) {

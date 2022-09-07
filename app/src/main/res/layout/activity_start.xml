@@ -4,23 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7A76C"
     tools:context=".Start">
+
     <Button
         android:id="@+id/btnstudent"
-        android:textSize="34dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:text="طالب"
         android:layout_marginTop="105dp"
-       />
+
+        android:backgroundTint="#BF9270"
+        android:text="طالب"
+        android:textSize="34dp" />
 
     <Button
         android:id="@+id/btnteatcher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnstudent"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="81dp"
+        android:backgroundTint="#BF9270"
         android:text="معلم"
         android:textSize="34dp" />
 </RelativeLayout>

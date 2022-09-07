@@ -3,8 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Fainl/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Fainl/app/src/main/res/layout/activity_sign.xml" value="0.209375" />
+        <entry key="..\:/SQLite/app/src/main/res/drawable/ic_close.xml" value="0.1" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_all_evaluations.xml" value="0.22" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_all_students.xml" value="0.21" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_list_student.xml" value="0.25" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_main.xml" value="0.22327898550724637" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_myevaluation.xml" value="0.2" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_quran_list.xml" value="0.25" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_register_student.xml" value="0.22" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_selectsura.xml" value="0.22" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_start.xml" value="0.25" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_studen_menu.xml" value="0.25" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/activity_student_choose.xml" value="0.21" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/gridviewlayout.xml" value="0.18125" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/img.xml" value="0.14356884057971014" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/singlestudent.xml" value="0.21" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/spinner_list.xml" value="0.25" />
+        <entry key="..\:/SQLite/app/src/main/res/layout/student.xml" value="0.25" />
       </map>
     </option>
   </component>

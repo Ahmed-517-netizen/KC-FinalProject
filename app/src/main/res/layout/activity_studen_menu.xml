@@ -4,33 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFC090"
     tools:context=".StudenMenu">
+
     <Button
         android:id="@+id/btnnewstudent"
-        android:textSize="34dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:text="تسجيل طالب"
         android:layout_marginTop="105dp"
-        />
+
+        android:backgroundTint="#F7A76C"
+        android:text="تسجيل طالب"
+        android:textSize="34dp" />
+
     <Button
         android:id="@+id/btnevalstudent"
-        android:textSize="34dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnnewstudent"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F7A76C"
         android:text="تقييم طالب"
-        android:layout_marginTop="20dp"
-        />
-    <Button
-        android:id="@+id/btnback"
-        android:textSize="34dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnevalstudent"
-        android:text="رجوع"
-        android:layout_marginTop="20dp"
-        />
+        android:textSize="34dp" />
 
 </RelativeLayout>

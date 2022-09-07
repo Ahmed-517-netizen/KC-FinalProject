@@ -6,12 +6,12 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\Lenovo\.android\avd\Nexus_6_API_28.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="adb-RZ8MA3FX82T-Wl77sM._adb-tls-connect._tcp" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-08-31T17:20:15.557273500Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-09-06T20:03:06.458186400Z" />
   </component>
 </project>

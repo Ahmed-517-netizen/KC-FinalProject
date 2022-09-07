@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7A76C"
+    android:padding="16dp"
     tools:context=".Myevaluation">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txttilte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:text="أختر الطالب"
+        android:textColor="@color/black"
+        android:textSize="24dp" />
+
+    <Spinner
+        android:id="@+id/spinnerstudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txttilte"
+
+        android:dropDownSelector="@color/black"
+        android:minHeight="70dp"
+        android:textAlignment="gravity"
+        android:textDirection="rtl" />
+
+    <TextView
+        android:id="@+id/txtdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerstudent"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:text="أختر التاريخ"
+        android:textColor="@color/black"
+        android:textSize="24dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtdate" />
+
+    <TextView
+        android:id="@+id/txtSoura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarView2"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:text="أختر السورة"
+        android:textColor="@color/black"
+        android:textSize="24dp" />
+
+    <Spinner
+        android:id="@+id/txtSouralist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSoura"
+        android:layout_marginBottom="60dp"
+        android:minHeight="70dp" />
+
+
+    <ScrollView
+        android:id="@+id/scr1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/txtSouralist"
+        android:layout_marginTop="-47dp">
+
+        <LinearLayout
+            android:id="@+id/lin11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linaya"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editayato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/Mango"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="الى"
+                android:textSize="28dp" />
+
+            <EditText
+                android:id="@+id/editayafrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/ayafrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="من الاية"
+                android:textSize="28dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Spinner
+        android:id="@+id/listgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scr1"
+        android:layout_marginTop="-160dp"
+        android:layout_marginBottom="60dp"
+
+        android:minHeight="70dp" />
+
+
+    <Button
+        android:id="@+id/buttonsave"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="45dp"
+
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#E9C891"
+        android:text="حــفــظ"
+        android:textColor="#000000"
+        android:textSize="25dp" />
+</RelativeLayout>

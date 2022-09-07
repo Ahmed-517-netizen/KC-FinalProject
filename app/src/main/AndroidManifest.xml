@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.save">
+    package="com.devawadh.sqlite">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,11 +13,54 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Save"
+        android:theme="@style/Theme.SQLite"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Sign"
+            android:name=".AllEvaluations"
             android:exported="false" />
+        <activity
+            android:name=".AllStudents"
+            android:exported="false" />
+        <activity
+            android:name=".Selectsura"
+            android:exported="false" />
+        <activity
+            android:name=".Myevaluation"
+            android:exported="false" />
+        <activity
+            android:name=".QuranList"
+            android:exported="false" />
+        <activity
+            android:name=".StudentChoose"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListStudent"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterStudent"
+            android:exported="false" />
+        <activity
+            android:name=".StudenMenu"
+            android:exported="false" />
+        <activity
+            android:name=".Start"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

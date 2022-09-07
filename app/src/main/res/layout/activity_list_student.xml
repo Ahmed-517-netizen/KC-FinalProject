@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BF9270"
     android:orientation="vertical"
     android:padding="5dp"
     tools:context=".ListStudent">
+
     <TextView
+        android:id="@+id/txtData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -15,23 +18,37 @@
         android:text="Android MySQL Application"
         android:textColor="@color/cardview_shadow_end_color"
         android:textSize="20sp"
-        android:id="@+id/txtData"
         android:textStyle="bold" />
+
     <Button
         android:id="@+id/btnFetch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="2dp"
-        android:background="@color/design_default_color_on_primary"
+        android:backgroundTint="#F7A76C"
         android:minWidth="250dp"
-        android:textSize="28dp"
         android:text="تحديث البيانات"
-        android:textColor="#fff" />
+        android:textColor="#000000"
+        android:textSize="28dp" />
+
     <ListView
         android:id="@+id/lstData"
-        android:divider="#000"
-        android:dividerHeight="1dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout >
+        android:layout_height="wrap_content"
+        android:divider="#000"
+        android:dividerHeight="1dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@color/white" />
+</LinearLayout>

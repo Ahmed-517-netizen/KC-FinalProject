@@ -15,7 +15,6 @@ Button bquran,beval;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_choose);
         bquran=findViewById(R.id.btnQuran);
-        beval=findViewById(R.id.btneval);
         bquran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -23,13 +22,13 @@ Button bquran,beval;
                 startActivity(intr1);
             }
         });
-        beval.setOnClickListener(new View.OnClickListener() {
+        /*beval.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intr1=new Intent(StudentChoose.this,Myevaluation.class);
-                startActivity(intr1);
+            public void onClick(View v) {*/
+               /* Intent intr1=new Intent(StudentChoose.this,Myevaluation.class);
+                startActivity(intr1);*/
 
-            }
-        });
+            }}
+      /*  });
     }
-}
+}*/
